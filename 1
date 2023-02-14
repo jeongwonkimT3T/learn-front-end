@@ -1,0 +1,78 @@
+------------ 1. HTML 기본 구조 ------------
+
+<!DOCTYPE html> -> 문서의 HTML 버전을 지정
+<head> 웹페이지의 보이지 않는 정보를 작성
+<body> 웹페이지의 보여지는 구조를 작성
+
+
+
+------------ 2. relative path / absolute path ------------
+
+<link rel="icon" href=" path "> → favicon
+
+<img src=" path " alt=" ">
+
+상대경로(relative path)
+1)  ./ (주변에서 찾음, 생략 가능)
+2)  ../ (주변에서 안 찾고 상위폴더로 올라감)
+
+절대경로(absolute path)
+1)  http (https)
+2)  / (root 경로, project에 접근했을 때 바로 있는 파일이나 폴더가 있는 경로)
+
+
+------------ 3. display ------------
+
+body에는 default로 margin 8px이 적용되어 있음 -> css reset cdn 또는 인라인 태그로 margin 값 초기화
+
+inline : 글자를 만들기 위한 요소 대표적 <span>, <img>, <a>, <br/>, <label>-> 콘텐츠 영역을 설정하는 용도
+요소가 수평으로 쌓임
+가로 세로 사이즈를 지정할 수 없음
+위아래 여백은 사이즈 지정할 수 없음
+인라인 요소는 자식요소로 블록요소를 가질 수 없음
+
+
+block : 
+div, headings, ul, li
+상자(레이아웃)를 만들기 위한 요소
+부모요소의 크기만큼 자동으로 늘어남
+사이즈 지정에서 자유로움 (w/h/m/p 값)
+
+
+인라인-블록 :
+<input>
+수평으로 쌓이되 블록요소처럼 사이즈 지정에서 자유로운 요소
+input type="checkbox" checked(이미 체크되어 있음) -> 중복 가능
+
+input type="radio" name="작명" /> a 하나만 체크 가능 -> name 없으면 체크해제가 안된댔나..
+input type="radio" name="작명" /> b 하나만 체크 가능
+
+<input type="text" value="미리 입력된 값" placeholder="힌트값(이름을 입력하세용)" disabled(입력 못하게 함 비활성화) />
+
+
+
+ 테이블 요소
+표 요소, 행, 열의 집합
+<table><tr(table row)> <td(table data)>
+퇴물이라서 요즘거의안씀
+
+ol/ul 사용 시 어떤 브라우저에 들어가서도 기호가 동일하게 뜨길 원하면 css 초기화한번 조지고 ㄱ
+
+
+
+<a href= "경로~~~~~~~~~" target="_blank"> 
+target="_blank" -> 새탭으로 여는 거 이거 없으면 걍 바로 리다이렉션됨
+링크 URL의 표시 위치 의미
+
+
+<태그 title="요소의 설명">
+
+
+/
+class
+id -> 고유한 값이기 때문에 중복 ㄴ
+
+
+<태그 data-이름="데이터"></태그>
+ex) <span data-fruit-name="apple">
+요소에 데이터를 지정 -> js에서 주로사용
